@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .general-infos {

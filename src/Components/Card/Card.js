@@ -7,7 +7,6 @@ import SearchBar from "../SearchBar/SearchBar";
 const Card = () => {
   return (
     <div className="card">
-      Hello from Card
       <Header />
       <SearchBar />
       <Details />

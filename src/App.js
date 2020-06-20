@@ -5,10 +5,13 @@ import Card from "./Components/Card/Card.js";
 
 function App() {
   return (
-    <div className="body">
-      Hello From App
+    <div className="app">
       <Card />
-      <a href="https://darksky.net/powerdby" class="darksky-logo">
+      <a
+        href="https://darksky.net/powerdby"
+        target="_blank"
+        class="darksky-logo"
+      >
         Powered By DarkSky
       </a>
     </div>

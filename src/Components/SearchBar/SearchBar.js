@@ -3,9 +3,13 @@ import "./SearchBar.css";
 
 const SearchBar = () => {
   return (
-    <div className="SearchBar">
-      Hello from Search Bar
-      <input type="text" class="city-search" placeholder="Enter Location" />
+    <div className="searchBar">
+      <input
+        data-city-search
+        type="text"
+        class="city-search"
+        placeholder="Enter A Location ..."
+      />
     </div>
   );
 };

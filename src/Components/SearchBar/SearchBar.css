@@ -1,3 +1,15 @@
-.SearchBar {
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-search {
+  margin: 20px;
+  font-size: 2rem;
+  border: 5px solid #159;
+  border-radius: 1.5rem;
+  padding: 10px 15px;
+  width: 100%;
   text-align: center;
 }
