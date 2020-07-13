@@ -5,8 +5,12 @@ const Header = () => {
   return (
     <div className="header">
       <div className="general-infos">
-        <div className="status">Enter a Location</div>
-        <div className="location">To Find The Weather</div>
+        <div className="status" id="desc">
+          Enter a Location
+        </div>
+        <div className="location" id="region">
+          To Find The Weather
+        </div>
       </div>
     </div>
   );
