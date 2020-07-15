@@ -119,7 +119,7 @@ function setBgWeather(weatherDesc) {
 
 function setWeatherData(data, place) {
   const forcast = data.forecast[date];
-  console.log(data);
+
   regionElement.textContent = data.location.name + ", " + data.location.country;
 
   descElement.textContent = data.current.weather_descriptions[0];
