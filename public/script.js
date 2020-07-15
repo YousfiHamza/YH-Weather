@@ -94,10 +94,12 @@ function setBgWeather(weatherDesc) {
   ];
   const sunnyData = ["sun", "sunny"];
   const snowyData = ["snow", "snowy", "blizzard"];
-  const rainyData = ["rain", "rainy", "drizzle"];
+  const rainyData = ["rain", "shower", "rainy", "drizzle"];
   const MistyData = ["mist", "misty", "fog"];
 
-  for (let i = 0; i < weatherDesc.length; i++) {
+  let i = 0;
+
+  while (i < weatherDesc.length) {
     const weather = weatherDesc[i].toLowerCase();
     if (cloudyData.includes(weather)) {
       return "cloudy.jpg";
@@ -110,7 +112,9 @@ function setBgWeather(weatherDesc) {
     } else if (MistyData.includes(weather)) {
       return "misty.jpg";
     }
+    i++;
   }
+  return "clear.jpg";
 }
 
 function setWeatherData(data, place) {
