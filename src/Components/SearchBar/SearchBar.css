@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 952px) {
   .city-search {
     font-size: 1.2rem;
   }

@@ -5,7 +5,7 @@ import Card from "./Components/Card/Card.js";
 export default class App extends React.Component {
   render() {
     return (
-      <div className="app">
+      <div className="app" id="bg">
         <Card />
       </div>
     );

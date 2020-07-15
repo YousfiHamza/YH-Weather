@@ -28,11 +28,20 @@
   font-size: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 952px) {
   .detail .title {
     font-size: 1rem;
   }
   .detail {
     margin: 1.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .detail .title {
+    font-size: 0.7rem;
+  }
+  .detail {
+    margin: 1rem 1rem;
   }
 }

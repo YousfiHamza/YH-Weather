@@ -30,7 +30,7 @@ const Details = () => {
       </div>
       <div className="detail">
         <div className="title">
-          <i class="fas fa-cloud-sun-rain" /> Precipit. Proba.
+          <i class="fas fa-cloud-sun-rain" /> Precipit. Prob.
         </div>
         <div className="value" id="precipProb">
           N/A

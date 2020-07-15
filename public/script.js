@@ -7,7 +7,6 @@ searchBox.addListener("places_changed", () => {
   if (place == null) return;
   const latitude = place.geometry.location.lat();
   const longitude = place.geometry.location.lng();
-  console.log(latitude, longitude);
   fetch(
     `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/forecast?access_key=${API_KEY}&query=${latitude},${longitude}`
   )
@@ -16,9 +15,9 @@ searchBox.addListener("places_changed", () => {
     .catch((error) => {
       console.log(error);
     });
-  console.log("script");
 });
 
+const bgElement = document.getElementById("bg").style;
 const descElement = document.getElementById("desc");
 const regionElement = document.getElementById("region");
 const temperatureLowElement = document.getElementById("tempLow");
@@ -84,16 +83,51 @@ const date =
   "-" +
   days[today.getDate() - 2];
 
+function setBgWeather(weatherDesc) {
+  const cloudyData = [
+    "clouds",
+    "patchy",
+    "patch",
+    "cloudy",
+    "overcast",
+    "cloud",
+  ];
+  const sunnyData = ["sun", "sunny"];
+  const snowyData = ["snow", "snowy", "blizzard"];
+  const rainyData = ["rain", "rainy", "drizzle"];
+  const MistyData = ["mist", "misty", "fog"];
+
+  for (let i = 0; i < weatherDesc.length; i++) {
+    const weather = weatherDesc[i].toLowerCase();
+    if (cloudyData.includes(weather)) {
+      return "cloudy.jpg";
+    } else if (sunnyData.includes(weather)) {
+      return "sunny.jpg";
+    } else if (snowyData.includes(weather)) {
+      return "snowy.jpg";
+    } else if (rainyData.includes(weather)) {
+      return "rainy.jpg";
+    } else if (MistyData.includes(weather)) {
+      return "misty.jpg";
+    }
+  }
+}
+
 function setWeatherData(data, place) {
   const forcast = data.forecast[date];
   console.log(data);
-  console.log(date);
+  regionElement.textContent = data.location.name + ", " + data.location.country;
+
   descElement.textContent = data.current.weather_descriptions[0];
-  regionElement.textContent = data.location.name;
+  const weatherDesc = data.current.weather_descriptions[0].split(" ");
+  bgElement.backgroundImage = `url('imgs/${setBgWeather(weatherDesc)}')`;
+
   temperatureHighElement.textContent = forcast.maxtemp + " C";
   temperatureLowElement.textContent = forcast.mintemp + " C";
+
   windSpeedElement.textContent = data.current.wind_speed + " Km/h";
   PrecipitationElement.textContent = data.current.precip * 10 + " %";
+
   sunRiseElement.textContent = forcast.astro.sunrise;
   sunDownElement.textContent = forcast.astro.sunset;
 }
