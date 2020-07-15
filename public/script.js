@@ -93,7 +93,7 @@ function setWeatherData(data, place) {
   temperatureHighElement.textContent = forcast.maxtemp + " C";
   temperatureLowElement.textContent = forcast.mintemp + " C";
   windSpeedElement.textContent = data.current.wind_speed + " Km/h";
-  PrecipitationElement.textContent = data.current.precip * 100 + " %";
+  PrecipitationElement.textContent = data.current.precip * 10 + " %";
   sunRiseElement.textContent = forcast.astro.sunrise;
   sunDownElement.textContent = forcast.astro.sunset;
 }

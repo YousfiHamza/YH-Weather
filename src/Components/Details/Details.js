@@ -6,34 +6,34 @@ const Details = () => {
     <div className="details">
       <div className="detail">
         <div className="title">
-          <i class="fas fa-temperature-low" /> Temp. Low (C)
+          <i class="fas fa-temperature-low" /> Temp. Low
         </div>
         <div className="value" id="tempLow">
-          N/A Celsius
+          N/A
         </div>
       </div>
       <div className="detail">
         <div className="title">
-          <i class="fas fa-temperature-high" /> Temp. High (C)
+          <i class="fas fa-temperature-high" /> Temp. High
         </div>
         <div className="value" id="tempHigh">
-          N/A Celsius
+          N/A
         </div>
       </div>
       <div className="detail">
         <div className="title">
-          <i class="fas fa-wind" /> Wind Speed (Km/h)
+          <i class="fas fa-wind" /> Wind Speed
         </div>
         <div className="value" id="windSpeed">
-          N/A Kilometers/Hour
+          N/A
         </div>
       </div>
       <div className="detail">
         <div className="title">
-          <i class="fas fa-cloud-sun-rain" /> Precipit. Proba. (%)
+          <i class="fas fa-cloud-sun-rain" /> Precipit. Proba.
         </div>
         <div className="value" id="precipProb">
-          N/A %
+          N/A
         </div>
       </div>
       <div className="detail">
