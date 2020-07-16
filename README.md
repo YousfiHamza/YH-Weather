@@ -1,4 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome To YH Weather :
+
+This is a Weather App created mainly with React.JS using Google API ( maps.googleapis ) & a Weather API ( https://weatherstack.com/ ).
+The App is Live on [YH-Weather.app](https://yh-weather.netlify.app/) <=
+
+## Overview :
+
+![](public/weather1.png)
+![](public/weather3.png)
+![](public/weather2.png)
+
+## Features :
+
+These are some of the features :
+
+* Once on the app, it will automatically fill the fiels with the weather details (temperature, wind speed, precipitaions ... ) at your current localisation based on your ip adress.
+
+* The google api will give you suggestions on the city you are searching for .
+
+* The background will change based on the weather description ( as shown in the overview section above )
+
+* The infos are loaded almost instanly to give you a fluid experience .
 
 ## Available Scripts
 
