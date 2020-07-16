@@ -6,11 +6,19 @@ export default class SearchBar extends React.Component {
     return (
       <div className="searchBar">
         <input
-          data-city-search
+          id="data-city-search"
           type="text"
           class="city-search"
           placeholder="Enter A Location ..."
         />
+        <span className="deleteBtn">
+          <i
+            class="far fa-times-circle"
+            onClick={() =>
+              (document.getElementById("data-city-search").value = "")
+            }
+          />
+        </span>
       </div>
     );
   }
