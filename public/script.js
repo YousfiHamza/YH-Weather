@@ -81,7 +81,7 @@ function setWeatherData(data) {
   bgElement.backgroundImage = `url('imgs/${setBgWeather(weatherDesc)}')`;
 
   windSpeedElement.textContent = data.current.wind_speed + " Km/h";
-  PrecipitationElement.textContent = data.current.precip * 10 + " %";
+  PrecipitationElement.textContent = data.current.precip + " mm";
 
   temperatureHighElement.textContent = forcast.maxtemp + " C";
   temperatureLowElement.textContent = forcast.mintemp + " C";
